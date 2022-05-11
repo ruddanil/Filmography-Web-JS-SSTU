@@ -39,7 +39,7 @@
 <div id="filter">
     <label class="label-text-filter">
         Страна
-        <select id="country-filter" class="value-filter">
+        <select id="country-filter" class="value-filter" onchange="">
         </select>
     </label>
     <label class="label-text-filter">
@@ -50,26 +50,27 @@
     <label class="label-text-filter">
         Дата выхода с
         <input type="date" id="yearFrom-filter" class="value-filter">
-         по
+        по
         <input type="date" id="yearTo-filter" class="value-filter">
     </label>
-    <div class="split"></div>
-    <label id="label-keyword-filter" class="label-text-filter">
-        Ключевые слова
-        <input type="text" id="keyword-filter" class="value-filter">
-        <input type="button" id="submit-keyword-filter" value="Найти">
-    </label>
-
+    <button class="filter__btn" onclick="offlineCatalog.renderCatalogByFilter()">Найти</button>
 </div>
 <div id="catalog"></div>
+<div id="comment"></div>
+<div id="newcomment"></div>
+<div id="add-film"></div>
 
 <!--Filter-->
 <script src="components/filter/filter.js"></script>
 <link rel="stylesheet" href="components/filter/filter.css">
 
 <!--Catalog-->
-<script src="components/catalog/onlineCatalog.js"></script>
+<script src="components/catalog/offlineCatalog.js"></script>
 <link rel="stylesheet" href="components/catalog/catalog.css">
+
+<!--Comment-->
+<script src="components/comment/comment.js"></script>
+<link rel="stylesheet" href="components/comment/comment.css">
 
 </body>
 </html>
